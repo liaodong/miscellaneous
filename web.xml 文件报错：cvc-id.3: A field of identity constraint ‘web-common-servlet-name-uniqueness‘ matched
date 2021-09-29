@@ -1,0 +1,7 @@
+报错内容
+在对Dynamic Web Project的web.xml进行配置时，遇到如下错误，大概的翻译如下：“身份约束“ web-common-servlet-name-uniqueness”字段与元素“ web-app”匹配，但该元素没有简单的类型。”
+
+将上面 xmlns=“http://java.sun.com/xml/ns/javaee” 中的--java改为大写JAVA，具体如下：xmlns=“http://JAVA.sun.com/xml/ns/javaee”，最终报错web.xml文件 错误信息全都没有了，且可以正常运行！ 截图如下：
+————————————————
+版权声明：本文为CSDN博主「还能坚持」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
+原文链接：https://blog.csdn.net/qq_35091353/article/details/115270974
