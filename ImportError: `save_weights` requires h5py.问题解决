@@ -1,0 +1,11 @@
+ImportError: `save_weights` requires h5py.问题解决
+问题分析：keras或者tensorflow保存模型是时候需要结合h5py使用，所以需要安装该库即可，并且保证h5py版本和keras或者tensorflow匹配问题
+
+问题解决
+安装h5py即可
+
+pip install h5py
+1
+如果仍然报错可能是h5py版本和keras或者tensorflow匹配问题，我安装的是tensorflow=1.6，安装命令如下
+
+pip install h5py==2.9.0
