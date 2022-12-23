@@ -1,11 +1,27 @@
-ImportError: `save_weights` requires h5py.问题解决
-问题分析：keras或者tensorflow保存模型是时候需要结合h5py使用，所以需要安装该库即可，并且保证h5py版本和keras或者tensorflow匹配问题
+背景
+使用Keras训练了一个模型，训练好后保存为h5文件。
 
-问题解决
-安装h5py即可
+再次加载这个模型时，报错了：AttributeError: ‘str‘ object has no attribute ‘decode‘ “：
 
-pip install h5py
-1
-如果仍然报错可能是h5py版本和keras或者tensorflow匹配问题，我安装的是tensorflow=1.6，安装命令如下
+我是使用 keras_to_tensorflow.py 这个脚本的时候报的错。
 
-pip install h5py==2.9.0
+解决
+网上说了一些报这个错误的解决方法。
+
+python2和python3的编码方式不一致导致
+h5py包的版本不对导致
+第一种情况基本可以排除，因为我是用Anaconda安装的tf，python使用的是3.6，没有python2。
+
+第二种情况是非常可能的，因为我使用conda list查看时，版本为3.1.0。
+
+于是，执行指令：
+
+pip install h5py==2.10
+
+安装了指定版本为2.10的包，重试程序，成功了！
+
+小结
+没什么可总结的，遇到问题，可能有多种解决方法，选择适合自己的那一种。
+————————————————
+版权声明：本文为CSDN博主「guotianqing」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
+原文链接：https://blog.csdn.net/guotianqing/article/details/115253163
