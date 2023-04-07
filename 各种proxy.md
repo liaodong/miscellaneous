@@ -14,3 +14,6 @@ export http_proxy=http://proxy_ip:port     #代表http代理
 export https_proxy=http://proxy_ip:port  #代表https代理
 
 export ftp_proxy=http://proxy_ip:port  #代表ftp代理
+
+# pip设置国内源
+pip install -i https://pypi.tuna.tsinghua.edu.cn/simple
