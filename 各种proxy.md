@@ -20,4 +20,5 @@ pip install -i https://pypi.tuna.tsinghua.edu.cn/simple
 
 # npm设置代理
 npm config set proxy http://server:port
+
 npm config set https-proxy http://server:port
