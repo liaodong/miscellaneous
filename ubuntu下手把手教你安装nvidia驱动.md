@@ -196,7 +196,7 @@ export LANGUAGE="UTF-8"
 
 检查hdmi线是不是接在主板的hdmi接口上了，接到显卡上就可以了（我被这个问题折磨了一下午才发现这么简单）。
 
-## 卸载驱动
+## 八、如何卸载驱动
 
 ```javascript
 sudo /usr/bin/nvidia-uninstall
