@@ -195,3 +195,20 @@ export LANGUAGE="UTF-8"
 ### 2、返回图形界面黑屏
 
 检查hdmi线是不是接在主板的hdmi接口上了，接到显卡上就可以了（我被这个问题折磨了一下午才发现这么简单）。
+
+## 卸载驱动
+
+```javascript
+sudo /usr/bin/nvidia-uninstall
+sudo apt-get --purge remove nvidia-*
+sudo apt-get purge nvidia*
+sudo apt-get purge libnvidia*
+```
+
++   直到命令不输出任何内容
+
+```javascript
+sudo dpkg --list | grep nvidia-*
+```
+
++   重新安装
