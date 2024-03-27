@@ -12,6 +12,11 @@ pip config set global.HTTPS_PROXY https://127.0.0.1:4438
 
 pip config set global.HTTP_PROXY http://127.0.0.1:4438
 
+# conda代理设置
+conda config --set proxy_servers.http http://id:pw@address:port
+
+conda config --set proxy_servers.https https://id:pw@address:port
+
 # ubuntu代理设置
 export http_proxy=http://proxy_ip:port     #代表http代理
 
